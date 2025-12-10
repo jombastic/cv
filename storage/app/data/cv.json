@@ -1,0 +1,85 @@
+{
+    "name": "John Doe",
+    "title": "Full-Stack Web Developer",
+    "location": "Remote, Europe",
+
+    "email": "john.doe@example.com",
+    "phone": "+123 456 789",
+
+    "social": {
+        "linkedin": "https://linkedin.com/in/john-doe",
+        "portfolio": "https://johndoe.dev"
+    },
+
+    "top_skills": [
+        "PHP",
+        "Laravel",
+        "Vue.js",
+        "Nuxt.js",
+        "React",
+        "Inertia.js",
+        "MySQL",
+        "TypeScript",
+        "Tailwind CSS",
+        "Docker",
+        "Linux",
+        "REST APIs",
+        "CI/CD",
+        "Testing"
+    ],
+
+    "education": [
+        {
+            "school": "European Institute of Technology",
+            "degree": "Bachelor of Science — Software Engineering",
+            "location": "Remote, EU",
+            "start": "2008",
+            "end": "2012"
+        }
+    ],
+
+    "experience": [
+        {
+            "company": "Alpha Tech",
+            "role": "Front-End Developer",
+            "start": "2024",
+            "end": "Present",
+            "location": "Remote",
+            "markdown_file": "experience-alpha-tech.md"
+        },
+        {
+            "company": "Novabit Health",
+            "role": "Full-Stack Developer",
+            "start": "2022",
+            "end": "2024",
+            "location": "Remote",
+            "markdown_file": "experience-novabit.md"
+        },
+        {
+            "company": "Skyline Solutions",
+            "role": "Full-Stack Developer",
+            "start": "2023",
+            "end": "2024",
+            "location": "Hybrid",
+            "markdown_file": "experience-skyline-solutions.md"
+        },
+        {
+            "company": "Orion Systems",
+            "role": "Full-Stack Developer",
+            "start": "2020",
+            "end": "2023",
+            "location": "Remote",
+            "markdown_file": "experience-orion-systems.md"
+        },
+        {
+            "company": "LuminaDev",
+            "role": "Backend & Full-Stack Developer",
+            "start": "2017",
+            "end": "2020",
+            "location": "Remote",
+            "markdown_file": "experience-lumina-dev.md"
+        }
+    ],
+
+    "summary_md_file": "summary.md"
+}
