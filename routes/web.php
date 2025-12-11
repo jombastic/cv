@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\CvController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CvController::class, 'show'])->name('cv.show');
+Route::post('/download', [CvController::class, 'downloadPdf'])->name('cv.download');
