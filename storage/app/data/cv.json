@@ -2,15 +2,12 @@
     "name": "John Doe",
     "title": "Full-Stack Web Developer",
     "location": "Remote, Europe",
-
     "email": "john.doe@example.com",
     "phone": "+123 456 789",
-
     "social": {
         "linkedin": "https://linkedin.com/in/john-doe",
         "portfolio": "https://johndoe.dev"
     },
-
     "top_skills": [
         "PHP",
         "Laravel",
@@ -27,17 +24,16 @@
         "CI/CD",
         "Testing"
     ],
-
     "education": [
         {
             "school": "European Institute of Technology",
-            "degree": "Bachelor of Science — Software Engineering",
+            "degree": "Bachelor of Science - Software Engineering",
             "location": "Remote, EU",
             "start": "2008",
             "end": "2012"
         }
     ],
-
+    "summary_md_file": "summary.md",
     "experience": [
         {
             "company": "Alpha Tech",
@@ -79,7 +75,5 @@
             "location": "Remote",
             "markdown_file": "experience-lumina-dev.md"
         }
-    ],
-
-    "summary_md_file": "summary.md"
+    ]
 }
