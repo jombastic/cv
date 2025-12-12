@@ -2,43 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Storage;
-use League\CommonMark\CommonMarkConverter;
+use App\Services\CvService;
 
 class CvController extends Controller
 {
+    public function __construct(private CvService $cvService) {}
+
     public function show()
     {
-        $cv = json_decode(Storage::disk('data')->get('cv.json'), true);
-
-        $converter = new CommonMarkConverter();
-
-        $summaryMarkdown = Storage::disk('data')->get('markdown/' . $cv['summary_md_file']);
-        $cv['summary_html'] = $converter->convert($summaryMarkdown)->getContent();
-
-        foreach ($cv['experience'] as $i => $exp) {
-            $file = Storage::disk('data')->get('markdown/' . $exp['markdown_file']);
-            $cv['experience'][$i]['description_html'] = $converter->convert($file)->getContent();
-        }
+        $cv = $this->cvService->getCvData();
 
         return view('cv.show', compact('cv'));
     }
 
     public function downloadPdf()
     {
-        $cv = json_decode(Storage::disk('data')->get('cv.json'), true);
-
-        $converter = new CommonMarkConverter();
-
-        $summaryMarkdown = Storage::disk('data')->get('markdown/' . $cv['summary_md_file']);
-        $cv['summary_html'] = $converter->convert($summaryMarkdown)->getContent();
-
-        foreach ($cv['experience'] as $i => $exp) {
-            $file = Storage::disk('data')->get('markdown/' . $exp['markdown_file']);
-            $cv['experience'][$i]['description_html'] = $converter->convert($file)->getContent();
-        }
+        $cv = $this->cvService->getCvData();
 
         $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('cv.pdf', compact('cv'))->setPaper('a4', 'portrait');
         return $pdf->download('cv.pdf');
