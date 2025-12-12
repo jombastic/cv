@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Contracts\PdfGeneratorInterface;
 use App\Services\CvService;
 
 class CvController extends Controller
 {
-    public function __construct(private CvService $cvService) {}
+    public function __construct(
+        private CvService $cvService,
+        private PdfGeneratorInterface $pdf
+    ) {}
 
     public function show()
     {
@@ -19,7 +23,7 @@ class CvController extends Controller
     {
         $cv = $this->cvService->getCvData();
 
-        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('cv.pdf', compact('cv'))->setPaper('a4', 'portrait');
+        $pdf = $this->pdf->generate('cv.pdf', compact('cv'));
         return $pdf->download('cv.pdf');
     }
 }

@@ -2,21 +2,21 @@
 
 namespace App\Services;
 
+use App\Contracts\MarkdownRendererInterface;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
-use League\CommonMark\CommonMarkConverter;
 
 class CvService
 {
-    protected string $jsonPath;
-    protected string $markdownPath;
-    protected CommonMarkConverter $markdown;
+    private string $jsonPath;
+    private string $markdownPath;
+    private MarkdownRendererInterface $markdown;
 
-    public function __construct()
+    public function __construct(MarkdownRendererInterface $markdown)
     {
         $this->jsonPath = 'cv.json';
         $this->markdownPath = 'markdown/';
-        $this->markdown = new CommonMarkConverter();
+        $this->markdown = $markdown;
     }
 
     public function getCvData(): array
@@ -43,7 +43,7 @@ class CvService
             return Storage::disk('data')->get($this->markdownPath . $filename);
         });
 
-        return $this->markdown->convert($markdownContent)->getContent();
+        return $this->markdown->toHtml($markdownContent);
     }
 
     protected function processExperience(array $experience): array
