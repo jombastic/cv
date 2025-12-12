@@ -26,5 +26,21 @@ class CvController extends Controller
         return view('cv.show', compact('cv'));
     }
 
-    public function downloadPdf() {}
+    public function downloadPdf()
+    {
+        $cv = json_decode(Storage::disk('data')->get('cv.json'), true);
+
+        $converter = new CommonMarkConverter();
+
+        $summaryMarkdown = Storage::disk('data')->get('markdown/' . $cv['summary_md_file']);
+        $cv['summary_html'] = $converter->convert($summaryMarkdown)->getContent();
+
+        foreach ($cv['experience'] as $i => $exp) {
+            $file = Storage::disk('data')->get('markdown/' . $exp['markdown_file']);
+            $cv['experience'][$i]['description_html'] = $converter->convert($file)->getContent();
+        }
+
+        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('cv.pdf', compact('cv'))->setPaper('a4', 'portrait');
+        return $pdf->download('cv.pdf');
+    }
 }
