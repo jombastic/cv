@@ -1,10 +1,5 @@
-Full-Stack Developer with **6+ years of experience** designing, developing, and optimizing large-scale web applications across healthcare, cultural, corporate, and SaaS industries.
+## Key Responsibilities & Achievements
 
-Specialized in **Laravel, Vue.js, Nuxt.js, MySQL, and Docker**, with a proven record of:
-
-- improving application performance by **25–40%**
-- reducing development time through reusable components and clean architecture
-- boosting SEO rankings using SSR, caching, and best practices
-- leading technical decisions in distributed engineering teams
-
-Driven by simplicity, maintainability, performance, and high-quality developer experience.
+- Delivered **mobile-first AMP websites**, increasing SEO rankings by **25%** and reducing load times by **50%**.
+- Built cross-platform applications with **Stripe integration**, dashboards, and dynamic forms.
+- Enhanced a custom CMS by adding new layout and metadata features, improving content creation efficiency by **30%**.

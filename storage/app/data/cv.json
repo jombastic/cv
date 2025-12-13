@@ -1,12 +1,12 @@
 {
-    "name": "Alex Carter",
+    "name": "Slavcho Mitrov",
     "title": "Full-Stack Web Developer",
-    "location": "Remote, Europe",
-    "email": "alex.carter@example.com",
-    "phone": "+123 456 789",
+    "location": "Skopje, North Macedonia",
+    "email": "mitrov.slavcho@gmail.com",
+    "phone": "+389 76 450 733",
     "social": {
-        "linkedin": "https://linkedin.com/in/alex-carter",
-        "portfolio": "https://alexcarter.dev"
+        "linkedin": "https://linkedin.com/in/slav-mit",
+        "portfolio": "https://slavchomitrov.netlify.app"
     },
     "top_skills": [
         "PHP",
@@ -16,64 +16,64 @@
         "React",
         "Inertia.js",
         "MySQL",
-        "TypeScript",
+        "JavaScript",
         "Tailwind CSS",
         "Docker",
         "Linux",
+        "Git",
         "REST APIs",
-        "CI/CD",
-        "Testing"
+        "CI/CD"
     ],
     "education": [
         {
-            "school": "European Institute of Technology",
-            "degree": "Bachelor of Science - Software Engineering",
-            "location": "Remote, EU",
+            "school": "University Goce Delcev",
+            "degree": "Bachelor of Science - Computer Science",
+            "location": "Stip, North Macedonia",
             "start": "2008",
             "end": "2012"
         }
     ],
-    "summary_md_file": "summary.md",
     "experience": [
         {
-            "company": "Alpha Tech",
+            "company": "Digital Orange",
             "role": "Front-End Developer",
             "start": "2024",
             "end": "Present",
-            "location": "Remote",
-            "markdown_file": "experience-alpha-tech.md"
+            "location": "Skopje, North Macedonia",
+            "markdown_file": "experience-digital-orange.md"
         },
         {
-            "company": "Novabit Health",
-            "role": "Full-Stack Developer",
-            "start": "2022",
-            "end": "2024",
-            "location": "Remote",
-            "markdown_file": "experience-novabit.md"
-        },
-        {
-            "company": "Skyline Solutions",
+            "company": "Interactive Solutions",
             "role": "Full-Stack Developer",
             "start": "2023",
-            "end": "2024",
-            "location": "Hybrid",
-            "markdown_file": "experience-skyline-solutions.md"
+            "end": "2025",
+            "location": "Ohrid, North Macedonia",
+            "markdown_file": "experience-interactive-solutions.md"
         },
         {
-            "company": "Orion Systems",
+            "company": "IceTech",
             "role": "Full-Stack Developer",
-            "start": "2020",
-            "end": "2023",
-            "location": "Remote",
-            "markdown_file": "experience-orion-systems.md"
+            "start": "2024",
+            "end": "2025",
+            "location": "Skopje, North Macedonia",
+            "markdown_file": "experience-icetech.md"
         },
         {
-            "company": "LuminaDev",
-            "role": "Backend & Full-Stack Developer",
-            "start": "2017",
-            "end": "2020",
-            "location": "Remote",
-            "markdown_file": "experience-lumina-dev.md"
+            "company": "Moxelle",
+            "role": "Full-Stack Developer",
+            "start": "2021",
+            "end": "2024",
+            "location": "Skopje, North Macedonia",
+            "markdown_file": "experience-moxelle.md"
+        },
+        {
+            "company": "Adamantus",
+            "role": "Full-Stack Developer",
+            "start": "2018",
+            "end": "2021",
+            "location": "Strumica, North Macedonia",
+            "markdown_file": "experience-adamantus.md"
         }
-    ]
+    ],
+    "summary_md_file": "summary.md"
 }
